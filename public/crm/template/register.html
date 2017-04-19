@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>员工管理系统-注册</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/register.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="main_t">
+				<h1>注册用户</h1>
+				<p>创建一个人新的用户</p>
+			</div>
+
+			<div class="main_b">
+
+				<div class="btn_img">
+					<img id="preview" />
+					<a href="javascript:;" class="btn_addPic">
+						<span>添加图片</span>
+						<input type='file' class="filePrew" id="file_upload" title="支持jpg、jpeg、gif、png格式" onchange="getfile(this)" name="pic" />
+					</a>
+				</div>
+
+				<div class="btm_input">
+					<input type="email" placeholder="邮箱" id="email" />
+				</div>
+				<div class="btm_input">
+					<input type="text" placeholder="用户名" id="text" />
+				</div>
+				<div class="btm_input">
+					<input type="password" placeholder="请输入密码" id="pwd" />
+					<div class="poSpan3">限6~16个字符，支持数字、字母或符号</div>
+				</div>
+				<div class="btm_input">
+					<input type="password" placeholder="再次输入密码" id="pwd2" />
+					<div class="poSpan4">两次输入的密码不一致</div>
+				</div>
+				<div class="btm_input2">
+					<input type="checkbox" class="check" checked="checked" /> <span>我已阅读并同意</span><b>《用户注册协议》</b>
+					<a href="login.html" class="zhuce">已注册？去登录!</a>
+				</div>
+				<div class="tijiao">
+					<a href="javascript:;" id="btn">提交</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

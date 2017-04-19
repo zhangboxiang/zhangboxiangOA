@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/svg/font.css" />
+<link rel="stylesheet" href="css/cc-table.css">
+</head>
+<body>
+	<div class="bx_total">
+		<div class="bx_left">
+			<div class="bx_tu"></div>
+		</div>
+		<div class="bx_right">
+			<ul>
+				<li><span class="bx_tu1"></span>提醒</li>
+				<li><span class="bx_tu2"></span>消息</li>
+				<li><span style="float: left;color: #83afcc;">帅帅锅巴</span><span class="bx_tu4"></span></li>
+				<li><span class="bx_tu3"></span>退出</li>
+			</ul>
+		</div>
+	</div>
+	<div class="bx_big">
+		<div class="bx_list">
+			<ul class="bx_ul">
+				<span style="margin-left: 20px;color: #5198cc;">功能列表</span>
+				<li><span class="icon-home3"></span><a href="../zhangboxiang/index.html" >首页</a></li>
+				<li><span class="icon-stats-bars"></span><a href="../weisanshuai/san_crm.html">数据表</a></li>
+				<li style="background: #f2f6f9;border-left: 3px solid #5b9cd4;"><span class="icon-file-text"></span><a href="../chenchen/cc-table.html" style="color: #5a98d1;">员工信息</a></li>
+				<li><span class="icon-copy"></span><a href="../changruili/register.html">注册</a></li>
+				<li><span class="icon-key"></span><a href="../changruili/login.html">登录</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+	<div class="cc" ng-controller="list">
+		<div class="cc-title">
+			<p><span><i>‹</i>/<i>›</i></span>列表</p>
+		</div>
+		<div class="cc-block">
+			<ul class="block_g">
+				<li class="fl">
+					<p><a href="../weisanshuai/san_zeng.html"><span>＋</span>新增</a></p>
+				</li>
+				<li class="fr">
+					<div>
+						<input type="text" class="search">
+						<span>
+							<button><img src="img/cc-img/cc-01.gif" alt="" class="search_btn"></button>
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="cc-main">
+			<table>
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>地址</th>
+						<th>职位</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody class="main">
+					<!--<tr>
+						<td></td>
+						<td><a href="#"></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><span class="compile"><a href="#">编辑</a></span><span class="delete"><a href="#">删除</a></span></td>
+					</tr>-->
+				</tbody>
+			</table>
+		</div>
+		<div class="cc-page">
+			<div class="fr">
+				<div id="pagecount"></div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cc-list.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

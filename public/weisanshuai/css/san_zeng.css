@@ -1,0 +1,512 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+body {
+	background: #e9ecf3;
+	padding-bottom:20px;
+}
+.bx_total{
+	width: 100%;
+	height: 76px;
+	background: #fff;
+	/*margin:0 auto;*/
+	float: left;
+	position: fixed;
+	top: 0;
+	z-index: 9;
+}
+span{
+	display: inline-block;
+}
+.bx_tu{
+	width:200px;
+	height: 34px;
+	background: url(../img/bx-img/1.gif) no-repeat;
+	position: absolute;
+	left: 28px;
+	top: 24px;
+}
+.bx_tu1{
+	width: 14px;
+	height:14px;
+	float: left;
+	margin-top: 31px;
+	margin-left: 20px;
+	background: url(../img/bx-img/2.gif) no-repeat;
+}
+.bx_tu2{
+	width: 15px;
+	height: 12px;
+	float: left;
+	margin-top: 31px;
+	margin-left: 20px;
+	background: url(../img/bx-img/3.gif) no-repeat;
+}
+.bx_left{
+	width: 50%;
+	height: 76px;
+	float: left;
+}
+.bx_right{
+	width: 50%;
+	height: 76px;
+	float: right;
+	
+}
+
+.bx_right>ul>li:hover{
+	background: #f3f4f6;
+	display: block;
+	cursor: pointer;
+}
+.bx_tu3{
+	width: 17px;
+	height: 14px;
+	float: left;
+	margin-top: 31px;
+	margin-left: 12px;
+	background: url(../img/bx-img/5.gif) no-repeat;
+}
+.bx_right>ul{
+	margin-left: 72px;
+	overflow: hidden;
+	float: right;
+}
+.bx_right>ul>li{
+	width: 90px;
+	height: 76px;
+	float: left;
+	/*margin-right: 50px;*/
+	list-style: none;
+	color: #9f9397;
+	line-height: 76px;
+	text-indent: 5px;
+}
+.bx_right>ul>li:nth-child(3){
+	width: 126px;
+	height: 76px;
+	text-indent: 10px;
+	margin-right: 13px;
+}
+.bx_tu4{
+	width: 39px;
+	height: 39px;
+	float: left;
+	margin-top: 18px;
+	margin-left:8px;
+	background: url(../img/bx-img/6.gif) no-repeat;
+}
+.bx_big{
+	width:98%;
+	overflow: hidden;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 94px;
+}
+.bx_list{
+	width: 15%;
+	height: 415px;
+	background: white;
+	border-radius: 5px;
+	float: left;
+	overflow: hidden;
+}
+.bx_list ul li{
+	width:99%;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	border-left: 3px solid #fff;
+}
+.bx_list>ul>span{
+	width: 235px;
+	height: 50px;
+	line-height: 70px;
+}
+.bx_list ul li:hover{
+	background: #f3f4f6;
+	border-left: 3px solid #5b9cd4;
+	color: #5b9acf;
+}
+.bx_list ul li:hover a{
+	color: #5b9acf;
+}
+.bx_list ul li:hover span{
+	color: #5a98d1;
+}
+.bx_list ul li a{
+	margin-left: 10px;
+}
+.bx_list ul li p{
+	width: 140px;
+	height: 37px;
+}
+.icon-home3{
+	width: 21px;
+	height: 17px;
+	font-size: 18px;
+	color: #a6c1d4;
+	float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.icon-stats-bars{
+	color: #a6c1d4;
+	font-size: 18px;
+	float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.icon-file-text{
+	color: #5a98d1;
+	font-size: 18px;
+	float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.icon-copy{
+	color: #a6c1d4;
+	font-size: 18px;
+	float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.icon-key{
+	color: #a6c1d4;
+	font-size: 18px;
+	float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.bx_wz {
+	width: 80%;
+	height: auto;
+	margin-left: 20px;
+	float: left;
+}
+
+.bx_top {
+	width: 200px;
+	height: 50px;
+	color: #8f7a7f;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+.bx_bot {
+	width: 200px;
+	height: 50px;
+	font-size: 6px;
+}
+
+.bx_tu10 {
+	width: 13px;
+	height: 10px;
+	background: url(../img/bx-img/13.gif) no-repeat;
+	margin-top: 10px;
+}
+
+.bx_tu11 {
+	width: 7px;
+	height: 5px;
+	background: url(../img/bx-img/14.gif) no-repeat;
+	margin-left: 10px;
+}
+
+.bx_tu12 {
+	width: 7px;
+	height: 5px;
+	background: url(../img/bx-img/14.gif) no-repeat;
+	margin-left: 10px;
+}
+
+.bx_yd {
+	width: 100%;
+	height: 124px;
+	border-left: 5px solid #8cb6e6;
+	background: #fff;
+}
+
+.bx_yd h3 {
+	font-size: 20px;
+	margin-left: 15px;
+	padding-top: 25px;
+}
+
+.bx_yd p {
+	margin-left: 15px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.bx_bb {
+	width: 100%;
+	height: 486px;
+	margin-left: 4px;
+	margin-top: 24px;
+}
+
+.bx_bbl {
+	width: 48%;
+	height: 486px;
+	float: left;
+}
+
+.bx_bbr {
+	width: 48%;
+	height: 486px;
+	float: right;
+}
+
+.san-zeng {
+	width: 80%;
+	height: auto;
+	float: left;
+	margin-left: 20px;
+	background: #e9ecf3;
+	overflow: hidden;
+}
+
+.san-title {
+	width: 100%;
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.san-title> h3 {
+	font-weight: normal;
+	font-size: 22px;
+}
+
+.san-title ul {
+	margin-top: 22px;
+	overflow: hidden;
+}
+
+.san-title ul li {
+	float: left;
+	color: #9599a5;
+}
+
+.san-title ul li>a {
+	color: #3280cb;
+}
+
+.san-title ul li>a:hover {
+	color: #23527c;
+}
+
+.san-title ul li::before {
+	content: '\00bb\00a0';
+	margin: 0 8px;
+}
+
+.san-title ul li.san-fang::before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 10px;
+	margin-left: 0;
+	background: url(../san-img/feng.jpg)no-repeat;
+}
+
+.san-con {
+	width:95%;
+	height: auto;
+	background: #fff;
+	float: left;
+	padding:0 20px 40px 20px;
+	overflow: hidden;
+}
+
+.san-con> h2 {
+	height: 59px;
+	line-height: 59px;
+	font-size: 18px;
+	color: #2acad8;
+	border-bottom: 1px solid #eef2f5;
+	font-weight: 600;
+}
+
+.san-form {
+	width: 90%;
+	padding-left: 8%;
+	overflow: hidden;
+}
+
+.san-name {
+	width: 100%;
+	margin-top: 20px;
+	float: left;
+}
+
+.san-name .san-input {
+	float: left;
+	width:70%;
+}
+
+.san-name .san-input input[type=text],.san-name .san-input input[type=number],.san-name .san-input input[type=email],.san-name .san-input input[type=date] {
+	width: 505px;
+	height: 35px;
+	border: 1px solid #ccc;
+	text-indent: 15px;
+	outline: none;
+}
+
+.san-name .san-input input:focus {
+	outline: none;
+	border-color: rgba(49, 194, 225, .75);
+	-webkit-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-moz-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-o-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-webkit-transition: border linear .5s, -webkit-box-shadow linear 1s;
+	-moz-transition: border linear .5s, -moz-box-shadow linear 1s;
+	-o-transition: border linear .5s, -o-box-shadow linear 1s;
+	transition: border linear .5s, box-shadow linear 1s;
+}
+
+.san-input-ti {
+	margin-top: 10px;
+	color: #525963;
+}
+
+.san-name> label {
+	width: 140px;
+	float: left;
+	color: #979d9d;
+	margin-right:1%;
+	height: 37px;
+	line-height: 37px;
+	text-align: right;
+	overflow: hidden;
+}
+.san-name .radio{
+	height:37px;
+	line-height:37px;
+	margin-left:5%;
+	vertical-align: middle;
+}
+.san-name .radio>input{
+	margin-right:10px;
+}
+.san-name-tu> label {
+	width:140px;
+	float: left;
+	color: #979d9d;
+	margin-right:1%;
+	height: 37px;
+	line-height: 37px;
+	text-align: right;
+	overflow: hidden;
+}
+
+.san-name-tu {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	height:300px;
+}
+
+.san-name-tu .san-input {
+	float: left;
+	width:70%;
+	padding-left:20%;
+}
+
+.san-name-tu .san-input input:focus {
+	outline: none;
+	border-color: rgba(49, 194, 225, .75);
+	-webkit-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-moz-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-o-box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	box-shadow: 0 0 10px rgba(49, 194, 225, .5);
+	-webkit-transition: border linear .5s, -webkit-box-shadow linear 1s;
+	-moz-transition: border linear .5s, -moz-box-shadow linear 1s;
+	-o-transition: border linear .5s, -o-box-shadow linear 1s;
+	transition: border linear .5s, box-shadow linear 1s;
+}
+
+.san-input-ti {
+	margin-top: 10px;
+	color: #525963;
+}
+
+.btn_addPic {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 39px;
+	overflow: hidden;
+	border: 1px solid #EBEBEB;
+	background: none repeat scroll 0 0 #F3F3F3;
+	color: #999999;
+	cursor: pointer;
+	text-align: center;
+	margin-top:1%;
+}
+
+.btn_addPic span {
+	display: block;
+	line-height: 39px;
+}
+
+.btn_addPic em {
+	background: url(http://p7.qhimg.com/t014ce592c1a0b2d489.png) 0 0;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	margin: 10px 5px 10px 0;
+	line-height: 20em;
+	vertical-align: middle;
+}
+
+.btn_addPic:hover em {
+	background-position: -19px 0;
+}
+
+.filePrew {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 39px;
+	font-size: 100px;
+	/* 增大不同浏览器的可点击区域 */
+	opacity: 0;
+	/* 实现的关键点 */
+	filter: alpha(opacity=0);
+	/* 兼容IE */
+}
+.san-name-tu img#preview{
+	width:200px;
+	height:200px;
+}
+.san-name .san-input .san-btn{
+	text-indent:0;
+	width:99px;
+	height:37px;
+	background:#0f90d2;
+	color:#fff;
+}
+.san-name .san-input .san-btn:focus{
+	outline: none;
+	border-color: rgba(0, 0, 0, .75);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	-webkit-transition: border linear .5s, -webkit-box-shadow linear 1s;
+	-moz-transition: border linear .5s, -moz-box-shadow linear 1s;
+	-o-transition: border linear .5s, -o-box-shadow linear 1s;
+	transition: border linear .5s, box-shadow linear 1s;
+}

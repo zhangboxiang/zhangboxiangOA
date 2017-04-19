@@ -1,0 +1,72 @@
+body{
+	background: #e9ecf3;
+	font-family: "微软雅黑";
+}
+.main{
+	width: 420px;
+	height: auto;
+	background: #fff;
+	margin:0 auto;
+	margin-top: 100px;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0 40px;
+}
+.main_top{
+	width: 159px;
+	height: 206px;
+    margin:0 auto;
+    margin-top: 38px;
+    margin-bottom: 22px;
+}
+.btm_input{
+	width: 100%;
+	height: 49px;
+	border-bottom: 1px solid #c6c7d9;
+}
+.btm_input input{
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border: none;
+	margin-top: 14px;
+	outline: none;
+}
+.btm_input2{
+	width: 100%;
+	height: 28px;
+	margin-top: 13px;
+	color: #b1b1a9;
+	font-weight: bold;
+}
+.tijiao{
+	width: 100%;
+	height: 34px;
+	background: #32c6d2;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+.tijiao a{
+    display: block;
+    width: 100%;
+	height: 34px;
+	background: #32c6d2;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	font-size: 12px;
+}
+.check{
+	float: left;
+	margin-top: 4px;
+}
+.btm_input2 span{
+	float: left;
+	margin-left: 3px;
+}
+
+
+
+
+

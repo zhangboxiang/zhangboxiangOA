@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/bx.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/svg/font.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+	</head>
+
+	<body>
+		<div class="bx_total">
+			<div class="bx_left">
+				<div class="bx_tu"></div>
+			</div>
+			<div class="bx_right">
+				<ul>
+					<li><span class="bx_tu1"></span>提醒</li>
+					<li><span class="bx_tu2"></span>消息</li>
+					<li><span style="float: left;color: #83afcc;" id="san_name">帅帅锅巴</span><img class="bx_tu4"></li>
+					<li id="tui"><span class="bx_tu3"></span>退出</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bx_big">
+			<div class="bx_list">
+				<ul class="bx_ul">
+					<span style="margin-left: 20px;color: #5198cc;">功能列表</span>
+					<a href="index.html" style="color: #5a98d1;;"><li style="background: #f2f6f9;border-left: 3px solid #5b9cd4;"><span class="icon-home3"></span>
+						首页
+					</li></a>
+					<a href="template/san_crm.html"><li><span class="icon-stats-bars"></span>
+						数据表
+					</li></a>
+					<a href="template/cc-table.html"><li><span class="icon-file-text"></span>
+						员工信息
+					</li></a>
+					<a href="template/cc-recycle.html" ><li><span class="icon-bin2" ></span>
+						回收站
+					</li></a>
+					<a href="template/register.html"><li><span class="icon-copy"></span>
+						注册
+					</li></a>
+				</ul>
+			</div>
+			<div class="bx_wz">
+				<div class="bx_top">北京世纪博联 员工管理系统</div>
+				<div class="bx_bot">
+					<a href=""><span class="bx_tu10"></span><span style="margin-left: 5px;color: #347fb8;">首页</span></a>
+					<a href=""><span class="bx_tu12"></span><span style="margin-left: 10px;color: #8c959a;">内容</span></a>
+				</div>
+				<div class="bx_yd">
+					<h3>北京世纪博联</h3>
+					<p> 北京世纪博联有限公司是一家大型互联网公司，由一批具有国内著名网络公司服务背景的网络精英所组成，年轻、富有活力，注定一开始就是一家成熟的网络科技公司。</p>
+					<p> &nbsp;北京世纪博联展览有限公司本着“客户第一，诚信至上”的原则，与多家企业建立了长期的合作关系。
+					</p>
+				</div>
+				<div class="bx_bb">
+					<div class="bx_bbl" id="main" style="width: 48%;height: 486px;background: #fff;"></div>
+					<div class="bx_br">
+						<table>
+							<thead>
+								<tr class="bx_tr">
+									<th>人员</th>
+									<th>金额</th>
+									<th>次数</th>
+									<!--<th>效率</th>-->
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="bx_aa">
+					<div class="bx_ll">
+						<div class="bx_sou">
+							<div class="bx_zi">
+								<p>指派任务</p>
+							</div>
+							<div class="bx_so">
+								<div class="bx_suo">
+									<input type="text" class="bx_kuang" placeholder="搜索..." />
+									<i class="icon-search"></i>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="bx_row">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+					<div class="bx_rr">
+						<div class="bx_soua">
+							<div class="bx_zia">
+								<p>项目进度</p>
+							</div>
+							<div class="bx_soa">
+								<ul>
+									<li id="jx">进行中</li>
+									<li style="border-bottom: none;" id="wc">已完成</li>
+
+								</ul>
+							</div>
+
+						</div>
+
+						<div class="bx_jd" id="bx_jd">
+							<ul>
+
+							</ul>
+						</div>
+						<div class="bx_wc" id="bx_wc">
+							<ul>
+
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="xx"></div>
+			<div class="bx_wd"></div>
+		</div>
+		<script>
+			$(".bx_ul>li:nth-child(3)").click(function() {
+				$('this').css({
+					'background': '#f3f4f6',
+					'borderLeft': '3px solid #5b9cd4'
+				})
+			})
+		</script>
+		<script>
+			$(function() {
+
+				$.ajax({
+					type: "get",
+					url: "http://localhost:8888/crm/tui",
+					success: function(e) {
+						if(e.flag == 1) {
+							location.href = "template/login.html"
+						} else {
+							$('#san_name').html(e.uname)
+							$('.bx_tu4').attr('src', '../../upload/' + e.img)
+						}
+					},
+					error: function() {
+						alert('异常!!')
+					}
+				});
+
+				$("#jx").click(function() {
+					$("#bx_jd").show();
+					$("#bx_wc").hide();
+					$("#jx").css('border-bottom', '4px solid #34c6d5')
+					$("#wc").css('border-bottom', 'none')
+				})
+				$("#wc").click(function() {
+					$("#bx_wc").show();
+					$("#bx_jd").hide();
+					$("#wc").css('border-bottom', '4px solid #34c6d5')
+					$("#jx").css('border-bottom', 'none')
+				})
+
+				$(".bx_row").mouseover(function() {
+					$(".bx_row").css("overflow-y", "auto")
+				})
+				$(".bx_row").mouseout(function() {
+					$(".bx_row").css("overflow-y", "hidden")
+				})
+				$(".bx_jd").mouseover(function() {
+					$(".bx_jd").css("overflow-y", "auto")
+				})
+				$(".bx_jd").mouseout(function() {
+					$(".bx_jd").css("overflow-y", "hidden")
+				})
+				$(".bx_wc").mouseover(function() {
+					$(".bx_wc").css("overflow-y", "auto")
+				})
+				$(".bx_wc").mouseout(function() {
+					$(".bx_wc").css("overflow-y", "hidden")
+				})
+
+				//图表	 
+				var myChart = echarts.init(document.getElementById("main"));
+				$.ajax({
+					type: "get",
+					url: "http://localhost:8888/up/index",
+					success: function(e) {
+						var money = []
+						for(var i = 0; i < e.length; i++) {
+							money.push(e[i].money)
+						}
+						option = {
+							backgroundColor: '#fff',
+							tooltip: {
+								trigger: 'axis'
+							},
+							legend: {
+								data: ['邮件营销', '视频广告', '联盟广告']
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							xAxis: [{
+								type: 'category',
+								boundaryGap: false,
+								data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+							}],
+							yAxis: [{
+								type: 'value'
+							}],
+							series: [{
+								name: '邮件营销',
+								type: 'line',
+								stack: '总量',
+								areaStyle: {
+									normal: {}
+								},
+								data: money
+							}, {
+								name: '视频广告',
+								type: 'line',
+								stack: '总量',
+								areaStyle: {
+									normal: {}
+								},
+								data: money
+							}, {
+								name: '联盟广告',
+								type: 'line',
+								stack: '总量',
+								areaStyle: {
+									normal: {}
+								},
+								data: money
+							}]
+						};
+						myChart.setOption(option)
+						window.onresize = myChart.resize;
+					},
+					error: function() {
+						alert('失败')
+					}
+				});
+
+				// 销售详细表
+				$.ajax({
+					type: "get",
+					url: "http://localhost:8888/up/indexx",
+					success: function(e) {
+						for(var i = 0; i < e.length; i++) {
+							console.log(e[i].img)
+							$("tbody").append("<tr><td><i><img src='http://localhost:8888/crm/img/bx-img/" + e[i].img + "'/></i>" + "<a href='javascript:;'>" + e[i].username + "</a></td>" + "<td>" + e[i].money + "</td>" + "<td>" + e[i].sales + "</td></tr>")
+						}
+					},
+					error: function() {
+						alert('失败')
+					}
+				});
+				//指派任务
+				$.ajax({
+					type: "get",
+					url: "http://localhost:8888/up/indexxx",
+					success: function(e) {
+						for(var i = 0; i < e.length; i++) {
+							$(".bx_row ul").append("<li>" + e[i].taske + "</li>")
+						}
+					},
+					error: function() {
+						alert('失败')
+					}
+				});
+				//进行中
+				$.ajax({
+					type: "get",
+					url: "http://localhost:8888/up/indexxxx",
+					success: function(e) {
+						for(var i = 0; i < e.length; i++) {
+							$(".bx_jd ul").append("<li>" + e[i].underway + "</li>")
+						}
+					},
+					error: function() {
+						alert('失败')
+					}
+				});
+				//已完成
+				$("#wc").click(function() {
+						$.ajax({
+							type: "get",
+							url: "http://localhost:8888/up/aindex",
+							success: function(e) {
+								for(var i = 0; i < e.length; i++) {
+									$(".bx_wc ul").append("<li>" + e[i].accomplish + "</li>")
+								}
+							},
+							error: function() {
+								alert('失败')
+							}
+						});
+					})
+					//搜索
+				$(".icon-search").click(function() {
+						$.ajax({
+							type: "get",
+							url: "http://localhost:8888/up/eindex",
+							data: {
+								sou: $('.bx_kuang').val().trim()
+							},
+							success: function(e) {
+								$(".bx_row ul").empty();
+								console.log(e)
+								var html = ""
+								for(var i = 0; i < e.length; i++) {
+									html += "<li>" + e[i].id + e[i].taske + "</li>"
+								}
+								$(".bx_row ul").append(html)
+							},
+							error: function() {
+								alert('失败')
+							}
+						});
+					})
+					// 退出
+				$('#tui').click(function() {
+					//				alert(1)
+					$.ajax({
+						url: "http://localhost:8888/up/tuichu",
+						type: "get",
+						success: function(e) {
+							//				   		console.log(req)
+							//				   		alert("nima")
+							location.href = "template/login.html"
+						},
+						error: function() {
+							alert('失败')
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>

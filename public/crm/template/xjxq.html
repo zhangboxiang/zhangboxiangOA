@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../css/xj.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/svg/font.css" />
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="bx_total">
+			<div class="bx_left">
+				<div class="bx_tu"></div>
+			</div>
+			<div class="bx_right">
+				<ul>
+					<li><span class="bx_tu1"></span>提醒</li>
+					<li><span class="bx_tu2"></span>消息</li>
+					<li><span style="float: left;color: #83afcc;" id="san_name">帅帅锅巴</span><img class="bx_tu4"></li>
+					<li id="tui"><span class="bx_tu3"></span>退出</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bx_big">
+			<div class="bx_list">
+				<ul class="bx_ul">
+					<span style="margin-left: 20px;color: #5198cc;">管理功能列表</span>
+					<a href="../../index.html"><li><span class="icon-home3"></span>
+						首页</li></a>
+					
+					<a href="san_crm.html"><li><span class="icon-stats-bars"></span>
+						数据表</li></a>
+					
+					<a style="color: #5a98d1;" href="cc-table.html"><li style="background: #f2f6f9;border-left: 3px solid #5b9cd4;"><span class="icon-file-text"></span>
+						员工信息</li></a>
+					
+					<a href="cc-recycle.html" ><li><span class="icon-bin2" ></span>
+						回收站</li></a>
+					
+					<a href="register.html"><li><span class="icon-copy"></span>
+						注册</li></a>
+					
+				</ul>
+			</div>
+
+			<div class="xj_center">
+				<div class="xj_center_header">
+					<div class="xj_titel">员工详细</div>
+					<div class="xj_body">
+						<ol>
+							<li><i class="icon-home3"></i>
+								<span><a href="javascript:;">首页</a></span></li>
+
+							<li>
+								<span><a style="color: #8c959a;" href="cc-table.html">员工信息</a></span>
+							</li>
+							<li>
+								<span><a style="color: #8c959a;" href="javascript:;">员工详细</a></span>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+				<div class="xj_center_body">
+					<div class="xj_center_body_header">
+						详情
+					</div>
+
+					<div class="xj_center_body_body">
+						<div class="xj_center_body_body_title">
+							<div class="xj_center_body_body_title_left">
+								<div class="xj_center_body_body_title_left_box">
+									<div class="xj_title_left_xx">员工基本信息</div>
+									<div class="xj_title_left_name">
+										<div class="xj_title_left_left">
+											姓名/name<span class="xqstyle" id="username"></span>
+										</div>
+										<div class="xj_title_left_right">
+											性别/sex<span class="xqstyle" id="sex"></span>
+										</div>
+									</div>
+									<div class="xj_title_left_zhiwei">
+										<div class="xj_title_left_left">
+											部门/branch<span class="xqstyle" id="branch"></span>
+										</div>
+										<div class="xj_title_left_right">
+											年龄/age<span class="xqstyle" id="age"></span>
+										</div>
+									</div>
+									<div class="xj_title_left_zhiwei">
+										<div class="xj_title_left_left">
+											职位/stafflevel<span class="xqstyle" id="stafflevel"></span>
+										</div>
+										<div class="xj_title_left_right">
+											学历/education<span class="xqstyle" id="education"></span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="xj_center_body_body_title_right">
+								<div id="img" class="xj_title_right_img"></div>
+								<!--<div id="img" class="xj_title_right_xx">员工照片</div>-->
+							</div>
+
+						</div>
+
+						<div class="xj_center_body_body_body">
+							<div class="xj_center_body_body_body_box">
+								<div class="xj_title_left_xx">员工更多信息</div>
+								<div class="xj_title_left_zhiwei">
+									<div class="xj_title_left_left">
+										邮箱/email<span class="xqstyle" id="email"></span>
+									</div>
+									<div class="xj_title_left_right">
+										手机号码/tel<span class="xqstyle" id="tel"></span>
+									</div>
+								</div>
+								<div class="xj_title_left_zhiwei">
+									<div class="xj_title_left_left">
+										身份证号/idnumber<span class="xqstyle" id="idnumber"></span>
+									</div>
+									<div class="xj_title_left_right">
+										地址/address<span class="xqstyle" id="address"></span>
+									</div>
+								</div>
+								<div class="xj_title_left_zhiwei">
+									<div class="xj_title_left_left">
+										入职时间/entrytime<span class="xqstyle" id="entrytime"></span>
+									</div>
+									<div class="xj_title_left_right">
+										离职时间/resigntime<span class="xqstyle" id="resigntime"></span>
+									</div>
+								</div>
+
+							</div>
+							<div class="xj_center_body_body_body_footer">
+								<a href="cc-table.html">返回列表>></a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$.ajax({
+				type: "get",
+				url: "http://localhost:8888/crm/tui",
+				success: function(e) {
+					if(e.flag == 1) {
+						location.href = "login.html"
+					} else {
+						$('#san_name').html(e.uname)
+						$('.bx_tu4').attr('src', '../../upload/' + e.img)
+					}
+				},
+				error: function() {
+					alert('异常!!')
+				}
+			});
+
+			var str = location.href.split("=")[1];
+			//		var str = location.search.substring(4);
+			$.ajax({
+				type: "get",
+				url: "http://localhost:8888/xjList/detail?id=" + str,
+				success: function(e) {
+					console.log(e)
+					$("#username").html(e.username)
+					$("#sex").html(e.sex)
+					$("#age").html(e.age)
+					$("#email").html(e.email)
+					$("#tel").html(e.tel)
+					$("#idnumber").html(e.idnumber)
+					$("#address").html(e.address)
+					$("#entrytime").html(e.entrytime)
+					$("#stafflevel").html(e.stafflevel)
+					$("#branch").html(e.branch)
+					$("#resigntime").html(e.resigntime)
+					$("#img").append("<img src='../upload/" + e.img + "'/>")
+						//http://192.168.113.148:8888/upload
+					$("#education").html(e.education)
+				},
+				error: function() {
+					alert("errpr!")
+				}
+			});
+
+			// 退出
+			$('#tui').click(function() {
+				//				alert(1)
+				$.ajax({
+					url: "http://localhost:8888/up/tuichu",
+					type: "get",
+					success: function(e) {
+						//				   		console.log(req)
+						//				   		alert("nima")
+						location.href = "login.html"
+					},
+					error: function() {
+						alert('失败')
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/commonality.css" />
+		<link rel="stylesheet" href="css/san_zeng.css" />
+		<link rel="stylesheet" href="css/svg/font.css"/>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/san-zang.js"></script>
+	</head>
+
+	<body>
+	<div class="bx_total">
+		<div class="bx_left">
+			<div class="bx_tu"></div>
+		</div>
+		<div class="bx_right">
+			<ul>
+				<li><span class="bx_tu1"></span>提醒</li>
+				<li><span class="bx_tu2"></span>消息</li>
+				<li><span style="float: left;color: #83afcc;">帅帅锅巴</span><span class="bx_tu4"></span></li>
+				<li><span class="bx_tu3"></span>退出</li>
+			</ul>
+		</div>
+	</div>
+		<div class="bx_big">
+		<div class="bx_list">
+			<ul class="bx_ul">
+				<span style="margin-left: 20px;color: #5198cc;">功能列表</span>
+				<li><span class="icon-home3"></span><a href="../zhangboxiang/index.html">首页</a></li>
+				<li><span class="icon-stats-bars"></span><a href="../weisanshuai/san_crm.html">数据表</a></li>
+				<li style="background: #f2f6f9;border-left: 3px solid #5b9cd4;" ><span class="icon-file-text"></span><a href="../chenchen/cc-table.html" style="color: #5a98d1;">员工信息</a></li>
+				<li><span class="icon-copy"></span><a href="../changruili/register.html">注册</a></li>
+				<li><span class="icon-key"></span><a href="../changruili/login.html">登录</a></li>
+			</ul>
+		</div>
+			<div class="san-zeng">
+				<!--
+            	作者：wss
+            	时间：2017-03-14
+            	描述：表单title
+            -->
+				<div class="san-title">
+					<h3>添加</h3>
+					<ul>
+						<li class="san-fang">
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">员工信息</a>
+						</li>
+						<li>表单</li>
+					</ul>
+				</div>
+				<!--
+            	作者：wss
+            	时间：2017-03-14
+            	描述：表单title完
+            -->
+				<!--
+            	作者：wss
+            	时间：2017-03-14
+            	描述：form开始
+            -->
+				<div class="san-con">
+					<h2>Add</h2>
+					<div class="san-form">
+						<!--
+                    	作者：wss
+                    	时间：2017-03-15
+                    	描述：img
+                    -->
+						<div class="san-name-tu">
+							<label>照片 / photograph</label>
+							<div class="san-input">
+								<img id="preview" />
+								<a href="javascript:;" class="btn_addPic">
+									<span>添加图片</span>
+									<input type='file' class="filePrew" id="file_upload" title="支持jpg、jpeg、gif、png格式" onchange="getfile(this)" name="pic" />
+								</a>
+							</div>
+						</div>
+
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：username
+                    -->
+						<div class="san-name">
+							<label>姓名 / Name</label>
+							<div class="san-input">
+								<input type="text" placeholder="姓名/Name" class="light name" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：sex
+                   -->
+						<div class="san-name">
+							<label>性别 / Sex</label>
+							<div class="san-input">
+								<!-- Multiple Radios -->
+								<label class="radio"><input type="radio" value="男" name="sex">男</label>
+								<label class="radio"><input type="radio" value="女" name="sex">女</label>
+							</div>
+
+						</div>
+
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：age
+                    -->
+						<div class="san-name">
+							<label>年龄 / Age</label>
+							<div class="san-input">
+								<input type="number" placeholder="年龄/Age" class="age" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：tel
+                    -->
+						<div class="san-name">
+							<label>电话 / tel</label>
+							<div class="san-input">
+								<input type="text" placeholder="电话/tel" class="tel" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：email
+                    -->
+						<div class="san-name">
+							<label>邮箱 / email</label>
+							<div class="san-input">
+								<input type="email" placeholder="邮箱/email" class="email" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：idnumber
+                    -->
+						<div class="san-name">
+							<label>身份证 / idnumber</label>
+							<div class="san-input">
+								<input type="text" placeholder="身份证/idnumber" class="idnumber" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：address
+                    -->
+						<div class="san-name">
+							<label>地址 / address</label>
+							<div class="san-input">
+								<input type="text" placeholder="地址/address" class="address" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：entrytime
+                    -->
+						<div class="san-name">
+							<label>入职时间/entrytime</label>
+							<div class="san-input">
+								<input type="date" class="entrytime" />
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：branch
+                    -->
+						<div class="san-name">
+							<label>所在部门 / branch</label>
+							<div class="san-input">
+								<input type="text" placeholder="所在部门/branch" class="branch" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：Staffevel
+                    -->
+						<div class="san-name">
+							<label>人员级别 / Staffevel</label>
+							<div class="san-input">
+								<input type="text" placeholder="人员级别/Staffevel" class="Staffevel" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：resigntime
+                    -->
+						<div class="san-name">
+							<label>离职时间/resigntime</label>
+							<div class="san-input">
+								<input type="date" class="resigntime" />
+							</div>
+						</div>
+
+						<!--
+                    	作者：wss
+                    	时间：2017-03-14
+                    	描述：学历
+                    -->
+						<div class="san-name">
+							<label>学历/education</label>
+							<div class="san-input">
+								<input type="text" placeholder="学历/education" class="education" />
+								<p class="san-input-ti"></p>
+							</div>
+						</div>
+
+						<div class="san-name">
+							<label></label>
+							<div class="san-input">
+								<input type="button" class="san-btn" id="san_btn" value="添加" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--
+            	作者：wss
+            	时间：2017-03-14
+            	描述：form end
+            -->
+
+			</div>
+	</body>
+
+</html>

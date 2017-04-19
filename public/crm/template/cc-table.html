@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/svg/font.css" />
+		<link rel="stylesheet" href="../css/cc-table.css">
+		<script src="../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/jquery.leoweather.min.js"></script>
+	</head>
+
+	<body>
+		<div class="bx_total">
+			<div class="bx_left">
+				<div class="bx_tu"></div>
+			</div>
+			<div class="bx_right">
+				<ul>
+					<li><span class="bx_tu1"></span>提醒</li>
+					<li><span class="bx_tu2"></span>消息</li>
+					<li><span style="float: left;color: #83afcc;" id="san_name">帅帅锅巴</span><img class="bx_tu4"></li>
+					<li id="tui"><span class="bx_tu3"></span>退出</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bx_big">
+			<div class="bx_list">
+				<ul class="bx_ul">
+					<span style="margin-left: 20px;color: #5198cc;">功能列表</span>
+					<a href="../../index.html"><li ><span class="icon-home3"></span>
+						首页
+					</li></a>
+					<a href="san_crm.html" ><li><span class="icon-stats-bars"></span>
+						数据表
+					</li></a>
+					<a href="cc-table.html"  style="color: #5a98d1;"><li style="background: #f2f6f9;border-left: 3px solid #5b9cd4;"><span class="icon-file-text"></span>
+						员工信息
+					</li></a>
+					<a href="cc-recycle.html" ><li><span class="icon-bin2" ></span>
+						回收站
+					</li></a>
+					<a href="register.html"><li><span class="icon-copy"></span>
+						注册
+					</li></a>
+				</ul>
+			</div>
+
+			<div class="cc" ng-controller="list">
+				
+				
+				
+				<div class="cc-add">
+					<div class="bj">
+						
+						<div id="demo">
+		<script>$('#demo').leoweather({format:'<p>{年}年{月}月{日}日<span>|</span>{城市}<span>|</span>{天气}<span>|</span>{风向}{风级}级</p><i class="icon-{图标}">{气温}℃</i><p>{时}时{分}分{秒}秒</p>'});</script>
+	</div>
+						
+					</div>
+				</div>
+				
+				
+				
+				<div class="cc-title">
+					<!--<p><span><i>‹</i>/<i>›</i></span>列表</p>-->
+				</div>
+				<div class="cc-block">
+					<ul class="block_g">
+						<li class="fl">
+							<p>
+								<a href="san_zeng.html"><span>＋</span>新增</a>
+							</p>
+						</li>
+						<li class="fr">
+							<div class="fr-search">
+								<input type="text" class="search">
+								<span>
+							<button><img src="../img/cc-img/cc-01.gif" alt="" class="search_btn"></button>
+						</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="cc-main">
+					<table>
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>姓名</th>
+								<th>性别</th>
+								<th>地址</th>
+								<th>职位</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody class="main"></tbody>
+					</table>
+				</div>
+				<div class="cc-page">
+					<div class="fr">
+						<div id="pagecount"></div>
+					</div>
+				</div>
+			</div>
+			<script src="../js/cc-list.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

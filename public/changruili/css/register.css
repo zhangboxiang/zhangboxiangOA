@@ -1,0 +1,98 @@
+body{
+	background: #e9ecf3;
+	font-family: "微软雅黑";
+}
+.main{
+	width: 420px;
+	height: auto;
+	background: #fff;
+	margin:0 auto;
+	margin-top: 100px;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0 40px;
+}
+.main_t{
+	width: 100%;
+	margin:0 auto;
+	margin-top: 43px;
+}
+.main_t h1{
+	font-size: 23px;
+	color: #647c86;
+	font-weight: normal;
+	line-height: 36px;
+}
+.main_t p{
+	font-size: 12px;
+	color: #b4c0d8;
+	line-height: 30px;
+}
+.main_b{
+	width: 100%;
+	margin-top: 7px;
+}
+.btm_input{
+	width: 100%;
+	height: 49px;
+	border-bottom: 1px solid #c6c7d9;
+	position: relative;
+}
+.btm_input input{
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	border: none;
+	margin-top: 14px;
+	outline: none;
+}
+/*#pwd::-webkit-input-placeholder{
+	color: red;
+}*/
+.poSpan,.poSpan3,.poSpan4{
+    position: absolute;
+	top: 21px;
+	color: red;
+	left: 0;
+	display: none;
+	z-index: 0;
+}
+.btm_input2{
+	width: 100%;
+	height: 28px;
+	margin-top: 13px;
+	color: #b1b1a9;
+	font-weight: bold;
+	font-size: 14px;
+}
+.tijiao{
+	width: 100%;
+	height: 34px;
+	background: #32c6d2;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+.tijiao a{
+    display: block;
+    width: 100%;
+	height: 34px;
+	background: #32c6d2;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	font-size: 12px;
+}
+.check{
+	float: left;
+	margin-top: 4px;
+}
+.btm_input2 span{
+	float: left;
+	margin-left: 3px;
+}
+.btm_input2 b{
+	color: #1886c5;
+	float: left;
+	margin-left: 3px;
+}
